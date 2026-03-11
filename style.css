@@ -2,81 +2,58 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:Arial;
 }
 
 body{
-font-family:Arial;
-background:#05050a;
+background:#050812;
 color:white;
-overflow-x:hidden;
 }
 
 /* NAVBAR */
 
 .navbar{
-
-position:fixed;
-top:0;
-width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 60px;
-
-background:rgba(10,10,20,0.6);
-backdrop-filter:blur(10px);
-
-z-index:10;
-
+padding:20px 40px;
+background:#0f1425;
+flex-wrap:wrap;
 }
 
 .logo{
-
 display:flex;
 align-items:center;
 gap:10px;
-font-weight:bold;
-
 }
 
 .logo img{
-
-width:40px;
-
+width:45px;
 }
 
 nav a{
-
-color:white;
+margin:0 10px;
+color:#ccc;
 text-decoration:none;
-margin-left:25px;
-opacity:0.8;
-transition:0.3s;
-
 }
 
 nav a:hover{
-
-opacity:1;
-
+color:white;
 }
 
 /* HERO */
 
 .hero{
-
+position:relative;
 height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-position:relative;
 overflow:hidden;
-
 }
 
 #bgvideo{
-
 position:absolute;
 top:0;
 left:0;
@@ -84,207 +61,141 @@ width:100%;
 height:100%;
 object-fit:cover;
 z-index:-2;
-
 }
 
 .overlay{
-
 position:absolute;
 width:100%;
 height:100%;
-
-background:linear-gradient(
-180deg,
-rgba(5,5,10,0.2),
-rgba(5,5,10,0.9)
-);
-
+background:rgba(0,0,0,0.6);
 z-index:-1;
-
 }
 
 .hero-content{
-
-max-width:800px;
-
-}
-
-.hero-img{
-
-width:300px;
-margin-bottom:20px;
-
+max-width:700px;
+padding:20px;
 }
 
 .hero h1{
-
 font-size:70px;
-
-background:linear-gradient(90deg,#ff7a00,#ff00ff);
-
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-
+margin-bottom:20px;
 }
 
 .hero p{
-
-opacity:0.8;
-font-size:20px;
-
+color:#aaa;
+margin-bottom:30px;
 }
 
 /* BUTTONS */
 
 .buttons{
-
-margin-top:30px;
-
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
 }
 
 .btn{
-
-background:linear-gradient(90deg,#ff7a00,#ff00ff);
-padding:15px 40px;
-border-radius:12px;
+background:#4d8cff;
+padding:12px 25px;
+border-radius:8px;
 text-decoration:none;
 color:white;
-margin:10px;
-font-weight:bold;
-
-box-shadow:0 0 20px rgba(255,0,255,0.4);
-
 }
 
 .btn-outline{
-
-border:1px solid rgba(255,255,255,0.3);
-padding:15px 40px;
-border-radius:12px;
+border:1px solid #444;
+padding:12px 25px;
+border-radius:8px;
 text-decoration:none;
 color:white;
-margin:10px;
-
 }
 
-/* SECTIONS */
+/* CONTRACT */
 
-section{
-
-padding:120px 20px;
+.contract-section{
+padding:80px 20px;
 text-align:center;
-
 }
 
-h2{
-
-font-size:40px;
-margin-bottom:40px;
-
+.contract-box{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+background:#111;
+padding:15px 20px;
+border-radius:10px;
 }
 
-/* GLASS BOX */
+.contract-box button{
+background:#8f5cff;
+border:none;
+padding:8px 15px;
+border-radius:6px;
+color:white;
+cursor:pointer;
+}
+
+/* ABOUT */
 
 .glass{
-
 background:rgba(255,255,255,0.05);
 padding:40px;
 border-radius:20px;
 max-width:700px;
 margin:auto;
-
-backdrop-filter:blur(10px);
-
 }
 
 /* TOKENOMICS */
 
 .grid{
-
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:30px;
-max-width:900px;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+max-width:1000px;
 margin:auto;
-
+padding:40px 20px;
 }
 
 .card{
-
-background:rgba(255,255,255,0.05);
-padding:40px;
-border-radius:20px;
-
-backdrop-filter:blur(10px);
-
-transition:0.3s;
-
+background:#111;
+padding:30px;
+border-radius:12px;
 }
 
-.card:hover{
+/* CHART */
 
-transform:translateY(-10px);
-box-shadow:0 10px 40px rgba(255,0,255,0.2);
-
+.chart{
+max-width:1100px;
+margin:auto;
 }
 
 /* FOOTER */
 
 footer{
-
 text-align:center;
 padding:40px;
-background:#030303;
-
+border-top:1px solid #222;
 }
-/* MOBILE RESPONSIVE */
 
-@media (max-width: 768px) {
+/* MOBILE */
 
-/* navbar */
+@media(max-width:768px){
 
 .navbar{
-flex-direction: column;
+flex-direction:column;
 gap:10px;
 text-align:center;
-padding:15px;
-}
-
-nav{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:10px;
-}
-
-/* hero */
-
-.hero{
-padding:120px 20px 60px 20px;
 }
 
 .hero h1{
 font-size:40px;
 }
 
-.hero p{
-font-size:16px;
-}
-
-/* video background */
-
-#bgvideo{
-object-fit:cover;
-}
-
-/* buttons */
-
 .buttons{
-display:flex;
 flex-direction:column;
 align-items:center;
-gap:12px;
-margin-top:25px;
 }
 
 .btn,
@@ -292,29 +203,6 @@ margin-top:25px;
 width:90%;
 text-align:center;
 }
-
-/* contract */
-
-.contract-box{
-flex-direction:column;
-gap:10px;
-text-align:center;
-word-break:break-all;
-}
-
-/* tokenomics cards */
-
-.grid{
-grid-template-columns:1fr;
-gap:20px;
-padding:0 20px;
-}
-
-.card{
-padding:25px;
-}
-
-/* chart */
 
 .chart iframe{
 height:400px;
